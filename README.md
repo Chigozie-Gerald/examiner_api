@@ -8,3 +8,6 @@ You'll need to install the node modules packages before running this backend ser
 
 # npm run dev
 Use this to run the app upon cloning and installing the required packages 
+
+
+You need to have MongoDB and Nodejs installed to get this running 
