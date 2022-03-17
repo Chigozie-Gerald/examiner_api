@@ -1,0 +1,24 @@
+{
+  "name": "examiner_api",
+  "version": "1.0.0",
+  "description": "Examination api",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "Ijomah Chigozie Gerald",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^3.2.1",
+    "axios": "^0.25.0",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.13.7",
+    "multer": "^1.4.3",
+    "nodemon": "^2.0.12",
+    "validator": "^13.6.0"
+  }
+}
