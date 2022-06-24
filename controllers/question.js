@@ -3,7 +3,6 @@ let Tag = require('../models/tag');
 var fs = require('fs');
 var path = require('path');
 const { errorObj } = require('../errorObject');
-const { resolveSoa } = require('dns');
 
 exports.postQuestion = (req, res) => {
   const { tag, title, details } = req.body;
@@ -184,7 +183,7 @@ exports.loadImage = (req, res) => {
       const newAddress = path.join(
         __dirname + '/.' + process.env.imageFolder + address,
       );
-      const buffer = fs.readFileSync(path.join(newAddress));
+
       res.sendFile(newAddress);
     } catch (err) {
       res.status(400).send(err);

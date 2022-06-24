@@ -4,7 +4,7 @@ var Schema = mongoose.Schema;
 
 var tagSchema = new Schema({
   name: { type: String, trim: true, unique: true },
-  questions: { type: Number, default: 0 },
+  imageAddress: { type: String, trim: true },
 });
 
 module.exports = mongoose.model('Tag', tagSchema);

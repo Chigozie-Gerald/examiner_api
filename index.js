@@ -1,6 +1,8 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
+const cors = require('cors');
+const compression = require('compression');
 const mongoose = require('mongoose');
 const { errorObj } = require('./errorObject');
 const profileRouter = require('./routes/profile');
@@ -8,6 +10,8 @@ const profileRouter = require('./routes/profile');
 
 //connect mongodb
 app.use(express.json());
+app.use(cors()); //cors
+app.use(compression()); //compression
 app.use(express.urlencoded({ extended: false }));
 
 //Routes

@@ -25,6 +25,7 @@ exports.postTag = (req, res) => {
       } else {
         let newTag = new Tag({
           name,
+          imageAddress: req.file?.filename ? req.file?.filename : ``,
         });
 
         newTag.save((err, saved) => {
@@ -103,6 +104,9 @@ exports.editTag = (req, res) => {
         return;
       }
       tag.name = name || tag.name;
+      if (req.file?.filename) {
+        tag.imageAddress = req.file?.filename;
+      }
 
       tag.save((err, saved) => {
         if (err) {

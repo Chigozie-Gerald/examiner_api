@@ -27,11 +27,11 @@ router.post('/questionDelete', question.deleteQuestion);
 router.get('/questionAllDelete', question.deleteAllQuestion);
 
 //Profiles, Register 16
-router.post('/tag', tag.postTag);
+router.post('/tag', upload.single('image'), tag.postTag);
 router.get('/tagReadAll', tag.readAllTag);
 router.post('/findTag', tag.findTag);
 router.post('/tagRead', tag.readTag);
-router.post('/tagEdit', tag.editTag);
+router.post('/tagEdit', upload.single('image'), tag.editTag);
 router.post('/tagDelete', tag.deleteTag);
 router.post('/tagAllDelete', tag.deleteAllTag);
 
